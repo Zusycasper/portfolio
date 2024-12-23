@@ -1,28 +1,62 @@
 import React, { useState, useEffect } from "react";
+import { Typography } from "@mui/material";
 import "./TypingEffect.css";
 
 const TypingEffect = () => {
-  const [text, setText] = useState("");
-  const fullText = "I'm a Frontend Developer"; 
-  const typingSpeed = 150;  
+  const [typingText, setTypingText] = useState("");
+  const fullText = "Frontend Developer";
+  const typingSpeed = 150;
+  const pauseTime = 2000; // Time to pause after full text is typed
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let index = 0;
+    let timer;
 
-    const typingInterval = setInterval(() => {
-      if (index < fullText.length) {
-        setText((prev) => prev + fullText[index]); 
-        index++;
-      } else {
-        clearInterval(typingInterval); 
+    const type = () => {
+      const currentLength = typingText.length;
+
+      if (!isDeleting && currentLength === fullText.length) {
+        // Pause before starting to delete
+        timer = setTimeout(() => setIsDeleting(true), pauseTime);
+        return;
       }
-    }, typingSpeed);
 
-    return () => clearInterval(typingInterval);
-  }, []);
+      if (isDeleting && currentLength === 0) {
+        // Pause before starting to type again
+        timer = setTimeout(() => setIsDeleting(false), pauseTime);
+        return;
+      }
+
+      const nextText = isDeleting
+        ? fullText.substring(0, currentLength - 1)
+        : fullText.substring(0, currentLength + 1);
+
+      setTypingText(nextText);
+
+      timer = setTimeout(type, typingSpeed);
+    };
+
+    timer = setTimeout(type, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [typingText, isDeleting]);
 
   return (
-    <span>{text}</span>
+    <span className="typing-effect-container" sx={{ display: "inline" }}>
+      <Typography
+        variant="h3"
+        component="div"
+        sx={{
+          fontWeight: "bold",
+          display: "inline",
+          color: "#54CC9C",
+        }}
+      >
+        I'm a{" "}
+      </Typography>{" "}
+      <span className="typing-effect" sx={{ display: "inline" }}>{typingText}</span>
+      <span className="cursor" sx={{ display: "inline" }}>|</span>
+    </span>
   );
 };
 
