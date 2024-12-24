@@ -19,7 +19,7 @@ function Home() {
         <CardContent className="card-content" sx={{ padding: "200px 0 0 100px" }}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
-              <Grid className="website-owner-details" item xs={10}>
+              <Grid className="website-owner-details" item xs={8}>
 
                 <span className="website-owner-name">
                   Sureshi Siriwardena [ZusyCasper]
@@ -43,8 +43,10 @@ function Home() {
                   </p>
                 </Typography>
               </Grid>
-              <Grid item xs={2}>
-                Lorem ipsum dolor sit a
+              <Grid item xs={4}>
+                <div className="hs-banner">
+                  <img className="admin-image" src="/profile-pic (1).png" alt="admin-image" />
+                </div>
               </Grid>
             </Grid>
           </Box>
