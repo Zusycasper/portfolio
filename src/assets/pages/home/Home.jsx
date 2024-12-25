@@ -16,11 +16,13 @@ function Home() {
   return (
     <div>
       <Card>
-        <CardContent className="card-content" sx={{ padding: "200px 0 0 100px" }}>
+        <CardContent
+          className="card-content"
+          sx={{ padding: "200px 0 0 100px" }}
+        >
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
               <Grid className="website-owner-details" item xs={8}>
-
                 <span className="website-owner-name">
                   Sureshi Siriwardena [ZusyCasper]
                 </span>
@@ -37,21 +39,47 @@ function Home() {
                   <span className="typed-text">
                     <TypingEffect />
                   </span>
-                  <br/>
+                  <br />
                   <p className="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt corporis iure dolor, officiis facilis ex assumenda omnis voluptatibus pariatur corrupti aspernatur sit excepturi? Quibusdam, ipsam magni natus amet libero pariatur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sunt corporis iure dolor, officiis facilis ex assumenda
+                    omnis voluptatibus pariatur corrupti aspernatur sit
+                    excepturi? Quibusdam, ipsam magni natus amet libero
+                    pariatur?
                   </p>
                 </Typography>
               </Grid>
               <Grid item xs={4}>
                 <div className="hs-banner">
-                  <img className="admin-image" src="/profile-pic (1).png" alt="admin-image" />
+                  <img className="gif" src="/rotate-loading.gif" alt="gif" />
+
+                  <img
+                    className="admin-image"
+                    src="/profile-pic (1).png"
+                    alt="admin-image"
+                  />
                 </div>
               </Grid>
             </Grid>
           </Box>
         </CardContent>
       </Card>
+      <div className="seperator">
+        <div className="seperator-line">
+          <Box
+            className="wave"
+            sx={{
+              width: "100%",
+              height: "100px",
+              borderRadius: 1,
+              bgcolor: "#040c16",
+              "&:hover": {
+                bgcolor: "primary.dark",
+              },
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }

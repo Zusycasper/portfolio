@@ -49,8 +49,17 @@ div{
     background-color: #0a0a0a;
     color: white;
     width: 35%;
-    height: 85%;
+    height: 75%;
     position: absolute;
     top: 250px;
     left: 900px;
 }
+
+.gif{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 800px;
+    left: 500px;
+}
+
