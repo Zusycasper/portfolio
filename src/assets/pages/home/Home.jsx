@@ -51,8 +51,6 @@ function Home() {
               </Grid>
               <Grid item xs={4}>
                 <div className="hs-banner">
-                  <img className="gif" src="/rotate-loading.gif" alt="gif" />
-
                   <img
                     className="admin-image"
                     src="/profile-pic (1).png"
@@ -74,7 +72,7 @@ function Home() {
               borderRadius: 1,
               bgcolor: "#040c16",
               "&:hover": {
-                bgcolor: "primary.dark",
+                bgcolor:"#04160E",
               },
             }}
           />

@@ -13,7 +13,7 @@
 }
 
 .website-owner-details{
-    background: rgba(7, 136, 255, .2);
+    background: #0788ff33;
     background: rgba(var(--px-theme-rgb), .2);
     border-radius: 4px;
     color: #fff;
