@@ -24,8 +24,16 @@ function About() {
             <Grid container spacing={4}>
               <Grid item xs={4}>
                 <div className="admin-photo">
-                  <img className="gif-rotate" src="/rotate-loading.gif" alt="gif" />
-                  <img className="gif-rotate-2" src="/rotate-loading.gif" alt="gif2" />
+                  <img
+                    className="gif-rotate"
+                    src="/rotate-loading.gif"
+                    alt="gif"
+                  />
+                  <img
+                    className="gif-rotate-2"
+                    src="/rotate-loading.gif"
+                    alt="gif2"
+                  />
 
                   <img
                     className="admin-image2"
@@ -35,29 +43,34 @@ function About() {
                 </div>
               </Grid>
               <Grid className="website-owner-details" item xs={8}>
-                <span className="website-owner-name" sx={{ paddingBottom: "1000px" }}>About me</span>
+                <span
+                  className="website-owner-name"
+                  sx={{ paddingBottom: "1000px" }}
+                >
+                  About me
+                </span>
                 <Typography>
-                <Typography
-  variant="h4"
-  component="div"
-  sx={{
-    fontWeight: "bold",
-    fontFamily: "Space Grotesk, sans-serif",
-    paddingLeft: "50px",
-  }}
->
-  I'm an experienced{" "}
-  <Typography
-    variant="h4"
-    component="span" // Ensures it's inline
-    sx={{
-      color: "#54CC9C",
-      fontWeight: "bold",
-    }}
-  >
-    front-end developer
-  </Typography>
-</Typography>
+                  <Typography
+                    variant="h4"
+                    component="div"
+                    sx={{
+                      fontWeight: "bold",
+                      fontFamily: "Space Grotesk, sans-serif",
+                      paddingLeft: "50px",
+                    }}
+                  >
+                    I'm an experienced{" "}
+                    <Typography
+                      variant="h4"
+                      component="span" // Ensures it's inline
+                      sx={{
+                        color: "#54CC9C",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      front-end developer
+                    </Typography>
+                  </Typography>
                   <br />
                   <span className="typed-text"></span>
                   <br />
