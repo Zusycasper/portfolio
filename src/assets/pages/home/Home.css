@@ -28,7 +28,14 @@
     text-align-last: start;
 }
 
-div{
+/* div{
+    text-align: left;
+    text-align-last: start;
+    background-color: #0a0a0a;
+    color: white;
+} */
+
+.home-container, .hs-banner, .seperator, .seperator-line    {
     text-align: left;
     text-align-last: start;
     background-color: #0a0a0a;
