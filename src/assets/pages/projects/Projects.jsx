@@ -139,52 +139,81 @@ const Projects = () => {
         liveUrl: "https://co2-asset-management.com/sign-in",
       },
     ],
+
+    //wordpress projects
     wordpress: [
       {
         id: 1,
-        title: "Website Design for Marketing Agency Startup",
+        title: "CO2 Website",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
+          "The CO2 Website is built using the Astra theme and Elementor page builder. It offers a flexible and user-friendly design, enabling easy customization and responsiveness. The combination of Astra and Elementor ensures a seamless, professional appearance while providing an intuitive interface for managing content and enhancing user experience.",
+          images: [
+            {
+              src: "/Projects/Wordpress/co2/co2website.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/co2/page2.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/co2/page3.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/co2/page4.png?height=50&width=100",
+            },
+          ],         type: "Website",
+        languages: "none",
         platform: "WordPress",
-        country: "USA",
+        country: "Thailand",
+        liveUrl: "https://www.co2.co.th/",
+
       },
       {
         id: 2,
-        title: "te Design for Marketing Agency Startup",
+        title: "Luxury Holidays",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
+          "The Luxury Holidays website is built using the Theme-2015 theme. It offers an elegant and user-friendly design, showcasing luxury holiday packages with a focus on ease of navigation and visual appeal. The theme ensures a responsive layout, providing a seamless browsing experience across different devices.",
+          images: [
+            {
+              src: "/Projects/Wordpress/luxuryholidays/page1.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/luxuryholidays/page2.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/luxuryholidays/page3.png?height=50&width=100",
+            },
+
+          ],           type: "Website",
+        languages: "none",
         platform: "WordPress",
-        country: "USA",
+        country: "Sri Lanka",
+        liveUrl: "https://luxuryholidays.tours/",
       },
       {
         id: 3,
-        title: "3 Website Design for Marketing Agency Startup",
+        title: "Tourman",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
+          "The TourMan website is built using the Theme-2015 theme. It features a clean and professional design, tailored for promoting tour packages and travel services. The theme ensures a responsive and user-friendly experience, making it easy for visitors to explore travel options and plan their trips.",
+          images: [
+            {
+              src: "/Projects/Wordpress/tourman/page1.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/tourman/page2.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Wordpress/tourman/page3.png?height=50&width=100",
+            },
+
+          ],         type: "Website",
+        languages: "none",
         platform: "WordPress",
-        country: "USA",
-      },
-      {
-        id: 4,
-        title: "4 Website Design for Marketing Agency Startup",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
-        platform: "WordPress",
-        country: "USA",
+        country: "Sri Lanka",
+        liveUrl: "https://tourman.tours/",
+
       },
     ],
+
     // ui interface designs
     ui: [
       {
