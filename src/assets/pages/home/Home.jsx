@@ -23,7 +23,7 @@ function Home() {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
               <Grid className="website-owner-details" item xs={8}>
-                <span className="website-owner-name">
+                <span className="website-owner-name-title">
                   Sureshi Siriwardena [ZusyCasper]
                 </span>
                 <Typography
@@ -40,7 +40,7 @@ function Home() {
                     <TypingEffect />
                   </span>
                   <br />
-                  <p className="description">
+                  <p className="description-about-admin">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Sunt corporis iure dolor, officiis facilis ex assumenda
                     omnis voluptatibus pariatur corrupti aspernatur sit
