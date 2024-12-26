@@ -1,3 +1,4 @@
+
 .website-owner-name{
     background: #54cc9c75;
     border-radius: 4px;
@@ -13,8 +14,8 @@
 }
 
 .project-box{
-    /* background-color: #fff; */
-    /* background: rgba(var(--px-theme-rgb), .2); */
+    background-color: #fff;
+    background: rgba(var(--px-theme-rgb), .2);
     border-radius: 10px;
     /* border: solid 2px #54CC9C; */
     width: 350px;
@@ -24,11 +25,11 @@
     align-items: center;
     padding: 20px;
     margin: 20px;
-    /* background: var(--px-white); */
+    background: var(--px-white);
 }
 
 div.project-box{
-    background-color: aliceblue;
+    background-color: rgb(240, 255, 249);
 }
 
 div.project-box:hover{
@@ -55,16 +56,37 @@ div.project-box:hover{
     object-fit: cover;
 }
 
-div.project-type, .project-type-container, .arrow-right{
-    background-color: aliceblue;
+div.project-type, .project-type-container, .arrow-right, .project-box{
+    background-color: rgb(240, 255, 249);
 
 }
 
 p.project-description{
-    background-color: aliceblue;
+    background-color: rgb(240, 255, 249);
 }
 
 .arrow-right{
     justify-self: center;
-    
+
+}
+
+.project-box{
+    background-color: rgb(240, 255, 249);
+
+}
+
+div.project-type.MuiBox-root.css-0{
+    background-color: rgb(240, 255, 249);
+    padding-left: 20px;
+
+}
+
+div.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.project-description-container.css-11nsb57-MuiGrid-root{
+    background-color: rgb(240, 255, 249);
+
+}
+
+div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-10.css-17p3wh3-MuiGrid-root{
+    background-color: rgb(240, 255, 249);
+
 }
