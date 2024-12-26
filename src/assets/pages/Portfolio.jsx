@@ -2,8 +2,9 @@ import React from 'react'
 import Header from '../components/header/Header'
 import Home from './home/Home'
 import About from './about/About'
-import Projects from './Projects'
+
 import Contact from './Contact'
+import Projects from './projects/Projects'
 
 function Portfolio() {
   return (

@@ -14,7 +14,7 @@ function Home() {
   }));
 
   return (
-    <div>
+    <div className="home-container">
       <Card>
         <CardContent
           className="card-content"

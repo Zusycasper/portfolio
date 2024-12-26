@@ -62,7 +62,7 @@ function About() {
                     I'm an experienced{" "}
                     <Typography
                       variant="h4"
-                      component="span" // Ensures it's inline
+                      component="span" 
                       sx={{
                         color: "#54CC9C",
                         fontWeight: "bold",
@@ -74,6 +74,7 @@ function About() {
                   <br />
                   <span className="typed-text"></span>
                   <br />
+                  {/* error in p */}
                   <p
                     className="description"
                     sx={{
@@ -107,19 +108,19 @@ function About() {
 
                       <div className="column">
                         <div className="card-center">
-                          <p>
-                            <i class="developer"></i>
-                          </p>
+                          <span>
+                            <i className="developer"></i>
+                          </span>
                           <h3>
                             <DeveloperModeIcon sx={{ marginBottom: "20px" }} />
                             <br />
                             1+
                           </h3>
-                          <p className="experinece-text">
+                          <span className="experinece-text">
                             HTML, CSS, JavaScript, React.JS, Bootstrap,
                             Tailwind, Material UI, Redux, Express.js, MySQL,
                             PHP, GIT version control, API
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </CardContent>
@@ -142,22 +143,22 @@ function About() {
 
                       <div className="column">
                         <div className="card-center">
-                          <p>
-                            <i class="developer"></i>
-                          </p>
+                          <span>
+                            <i className="developer"></i>
+                          </span>
                           <h3>
                             <DesignServicesIcon sx={{ marginBottom: "20px" }} />
                             <br />
                             1+
                           </h3>
-                          <p className="experinece-text">
+                          <span className="experinece-text">
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
-                          </p>
-                          <p className="dummy-text">
+                          </span>
+                          <span className="dummy-text">
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </CardContent>
