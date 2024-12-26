@@ -116,11 +116,11 @@ function About() {
                             <br />
                             1+
                           </h3>
-                          <span className="experinece-text">
+                          <p className="experinece-text">
                             HTML, CSS, JavaScript, React.JS, Bootstrap,
                             Tailwind, Material UI, Redux, Express.js, MySQL,
                             PHP, GIT version control, API
-                          </span>
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -151,14 +151,14 @@ function About() {
                             <br />
                             1+
                           </h3>
-                          <span className="experinece-text">
+                          <p className="experinece-text">
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
-                          </span>
-                          <span className="dummy-text">
+                          </p>
+                          <p className="dummy-text">
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
-                          </span>
+                          </p>
                         </div>
                       </div>
                     </CardContent>
