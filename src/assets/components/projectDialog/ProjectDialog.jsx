@@ -28,13 +28,16 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
   if (!currentProject) return null;
 
   return (
+    <div className="dialog-Box-open" sx={{ backgroundColor: "rgb(240, 255, 249)",
+    }}>
     <Dialog
       open={open}
       onClose={onClose}
       maxWidth="lg"
       fullWidth
+      sx={{ backgroundColor: "#ffff" }}
     >
-      <Box sx={{ position: 'relative' }}>
+      <Box sx={{ position: 'relative'}}>
         <IconButton
           onClick={onClose}
           sx={{
@@ -148,24 +151,6 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                       {currentProject.country}
                     </Typography>
                   </Grid>
-
-                  <Grid item xs={4}>
-                    <Typography variant="subtitle2" color="text.secondary">
-                      Live URL:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body2">
-                      <a 
-                        href={currentProject.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style={{ color: '#4a90e2', textDecoration: 'none' }}
-                      >
-                        {currentProject.liveUrl}
-                      </a>
-                    </Typography>
-                  </Grid>
                 </Grid>
               </Box>
             </Grid>
@@ -173,6 +158,7 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
         </DialogContent>
       </Box>
     </Dialog>
+    </div>
   );
 };
 
