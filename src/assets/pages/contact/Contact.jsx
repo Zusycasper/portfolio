@@ -44,7 +44,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container" id="contact" style={{ justifyContent: "center" ,alignItems: "center", textAlignla: "center" }}>
       <Card className="contact-card-full">
         <CardContent
           className="card-content-contact"
