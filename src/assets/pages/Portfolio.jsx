@@ -3,7 +3,7 @@ import Header from '../components/header/Header'
 import Home from './home/Home'
 import About from './about/About'
 
-import Contact from './Contact'
+import Contact from './contact/Contact'
 import Projects from './projects/Projects'
 
 function Portfolio() {
