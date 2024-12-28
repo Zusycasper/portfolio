@@ -26,18 +26,18 @@ function About() {
                 <div className="admin-photo">
                   <img
                     className="gif-rotate"
-                    src="/rotate-loading.gif"
+                    src="/spin-logo.gif"
                     alt="gif"
                   />
                   <img
                     className="gif-rotate-2"
-                    src="/rotate-loading.gif"
+                    src="/spin-logo.gif"
                     alt="gif2"
                   />
 
                   <img
                     className="admin-image2"
-                    src="/profile_pic_transparent.png"
+                    src="/blue-background-pic.png"
                     alt="admin-image"
                   />
                 </div>

@@ -10,7 +10,7 @@ function Header() {
           <CardContent className="header-card-content">
             <div className="logo">
               <a href="#home">
-                <img src="/mylogo.png" alt="Logo" />
+                <img src="/logoblue.png" alt="Logo" />
               </a>
             </div>
             <nav className="nav-container">
