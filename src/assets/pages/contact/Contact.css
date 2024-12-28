@@ -51,6 +51,7 @@ div.contact-container, .contact-card-full, .card-content-contact{
 
 div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.contact-card-full.css-1j74uew-MuiPaper-root-MuiCard-root{
     background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
+    border-radius: 0 !important;
 }
 
 

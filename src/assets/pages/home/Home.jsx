@@ -23,7 +23,7 @@ function Home() {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
               <Grid className="website-owner-details" item xs={8}>
-                <span className="website-owner-name-title">
+                <span className="website-owner-name-title" style={{ color: "white" }}>
                   Sureshi Siriwardena [ZusyCasper]
                 </span>
                 <Typography
@@ -32,6 +32,7 @@ function Home() {
                   sx={{
                     fontWeight: "bold",
                     fontFamily: "Space Grotesk, sans-serif",
+                    color: "white",
                   }}
                 >
                   Hi, I'm Zusy
@@ -65,10 +66,9 @@ function Home() {
             sx={{
               width: "100%",
               height: "100px",
-              // borderRadius: 1,
               bgcolor: "#040c16",
               "&:hover": {
-                bgcolor:"#04160E",
+                bgcolor:"#040c16",
               },
             }}
           />

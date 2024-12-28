@@ -102,26 +102,27 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                 <IconButton
                   onClick={() => handleProjectChange('prev')}
                   sx={{
-                    bgcolor: 'rgba(255, 255, 255, 0.8)',
-                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.9)' },
+                    color: 'black',
+                    bgcolor: 'rgba(240, 240, 240, 0.18)',
+                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.8)' },
                     position: 'absolute',
                     top:240,
                     left:0,
                   }}
                 >
-                  <ChevronLeft size={50} />
+                  <ChevronLeft size={50} color="black" />
                 </IconButton>
                 <IconButton
                   onClick={() => handleProjectChange('next')}
                   sx={{
-                    bgcolor: 'rgba(255, 255, 255, 0.9)',
-                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.9)' },
+                    bgcolor: 'rgba(240, 240, 240, 0.18)',
+                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.8)' },
                     position: 'absolute',
                     top:240,
                     left:1120,
                   }}
                 >
-                  <ChevronRight size={50} />
+                  <ChevronRight size={50} color="black"/>
                 </IconButton>
               </div>
             </Grid>

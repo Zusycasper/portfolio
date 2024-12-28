@@ -1,8 +1,7 @@
 
 .website-owner-name{
     background: #4d9feb72;
-    /* border-radius: 4px; */
-    color: #fff;
+    color: #000000;
     color: var(--px-white);
     display: inline-block;
     font-size: 16px;

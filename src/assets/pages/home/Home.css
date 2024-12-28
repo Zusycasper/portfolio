@@ -1,6 +1,5 @@
 .website-owner-name-title{
     background: #4d9feb72;
-    /* border-radius: 4px; */
     color: #fff;
     color: var(--px-white);
     display: inline-block;
@@ -15,7 +14,6 @@
 .website-owner-details{
     background: #0788ff33;
     background: rgba(var(--px-theme-rgb), .2);
-    /* border-radius: 4px; */
     color: #fff;
     color: var(--px-white);
     display: inline-block;

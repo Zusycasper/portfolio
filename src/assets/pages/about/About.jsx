@@ -45,7 +45,7 @@ function About() {
               <Grid className="website-owner-details" item xs={8}>
                 <span
                   className="website-owner-name"
-                  sx={{ paddingBottom: "1000px" }}
+                  style={{ color: "white" }}
                 >
                   About me
                 </span>
@@ -57,6 +57,7 @@ function About() {
                       fontWeight: "bold",
                       fontFamily: "Space Grotesk, sans-serif",
                       paddingLeft: "50px",
+                      color: "white",
                     }}
                   >
                     I'm an experienced{" "}
@@ -77,8 +78,9 @@ function About() {
                   {/* error in p */}
                   <p
                     className="description"
-                    sx={{
+                    style={{
                       fontSize: "16px",
+                      color: "white",
                     }}
                   >
                     Currently employed at CO2 Pvt. Ltd. as a Frontend Developer,
@@ -100,6 +102,7 @@ function About() {
                           lineHeight: 1.5,
                           fontFamily: "Space Grotesk, sans-serif",
                           textAlignLast: "center",
+                          color: "white",
                         }}
                       >
                         Developer
@@ -111,12 +114,12 @@ function About() {
                           <span>
                             <i className="developer"></i>
                           </span>
-                          <h3>
-                            <DeveloperModeIcon sx={{ marginBottom: "20px" }} />
+                          <h3 className="experience-number" style={{ color: "white" , paddingTop: "20px" }}>
+                            <DeveloperModeIcon color="primary" sx={{ marginBottom: "20px" }} />
                             <br />
                             1+
                           </h3>
-                          <p className="experinece-text">
+                          <p className="experinece-text" style={{ color: "white" }}>
                             HTML, CSS, JavaScript, React.JS, Bootstrap,
                             Tailwind, Material UI, Redux, Express.js, MySQL,
                             PHP, GIT version control, API
@@ -126,7 +129,7 @@ function About() {
                     </CardContent>
                   </Card>
                   <Card className="card-experience">
-                    <CardContent>
+                    <CardContent className="card-experience-details">
                       <Typography
                         variant="h5"
                         sx={{
@@ -135,6 +138,7 @@ function About() {
                           lineHeight: 1.5,
                           fontFamily: "Space Grotesk, sans-serif",
                           textAlignLast: "center",
+                          color: "white",
                         }}
                       >
                         Desinger
@@ -146,12 +150,12 @@ function About() {
                           <span>
                             <i className="developer"></i>
                           </span>
-                          <h3>
-                            <DesignServicesIcon sx={{ marginBottom: "20px" }} />
+                          <h3 style={{ color: "white", paddingTop: "20px" }}>
+                            <DesignServicesIcon color="primary" sx={{ marginBottom: "20px" }} />
                             <br />
                             1+
                           </h3>
-                          <p className="experinece-text">
+                          <p className="experinece-text" style={{ color: "white" }}>
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
                           </p>
@@ -176,7 +180,6 @@ function About() {
             sx={{
               width: "100%",
               height: "100px",
-              // borderRadius: 1,
               backgroundImage: "linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%)",
               "&:hover": {
                 bgcolor: "#040c16",

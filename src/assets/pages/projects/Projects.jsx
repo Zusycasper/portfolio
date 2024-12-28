@@ -40,6 +40,7 @@ const Projects = () => {
         languages: "React.js, HTML, CSS",
         platform: "React Web",
         country: "Thailand",
+        style: { color: "black" },
         liveUrl: "not hosted yet",
       },
       {
@@ -401,7 +402,7 @@ const Projects = () => {
                         variant="contained"
                         onClick={() => handleProjectClick("frontend")}
                         sx={{
-                          backgroundColor: "transparent",
+                          backgroundColor: "1976d2",
                           border: "1px solid #1976d2",
                         }}
                       >
@@ -486,7 +487,7 @@ const Projects = () => {
                         variant="contained"
                         onClick={() => handleProjectClick("wordpress")}
                         sx={{
-                          backgroundColor: "transparent",
+                          backgroundColor: "1976d2",
                           border: "1px solid #1976d2",
                         }}
                       >
@@ -565,13 +566,13 @@ const Projects = () => {
                       paddingLeft: "7px",
                     }}
                   >
-                    <Box className="arrow-right">
+                    <Box className="arrow-right" style={{ paddingLeft: "7px" }}>
                       <Button
                         className="project-button"
                         variant="contained"
                         onClick={() => handleProjectClick("ui")}
                         sx={{
-                          backgroundColor: "transparent",
+                          backgroundColor: "1976d2",
                           border: "1px solid #1976d2",
                           "&:hover": {
                             borderColor: "#1976d2",
@@ -606,22 +607,6 @@ const Projects = () => {
           </div>
         </CardContent>
       </Card>
-      {/* <div className="seperator">
-        <div className="seperator-line">
-          <Box
-            className="wave"
-            sx={{
-              width: "100%",
-              height: "100px",
-              borderRadius: 1,
-              bgcolor: "#040c16",
-              "&:hover": {
-                bgcolor: "#040c16",
-              },
-            }}
-          />
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -182,7 +182,6 @@ function Contact() {
               height: "50px",
               textAlignLast: "center",
               alignContent: "space-evenly",
-              // borderRadius: 1,
               bgcolor: "#082742",
               "&:hover": {
                 bgcolor: "#040c16",
