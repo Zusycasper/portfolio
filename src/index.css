@@ -19,7 +19,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #54CC9C;
+  color: #040c16;
   font-size: 16px;
   font-weight: 500;
 }
@@ -44,19 +44,21 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #07ffb5db;
+  background-color: #1976d2;
   color: #e1e1e1;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #1e674a;
-  background-color: #31cd8f;
+  border-color: #1976d2;
+  background-color: #040c16;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
 
 @media (prefers-color-scheme: light) {
   :root {

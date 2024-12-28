@@ -66,20 +66,20 @@ function Contact() {
                       zIndex: "1",
                     }}
                   />
-                  <Grid item container direction="column" spacing={2}>
+                  <Grid item container direction="column" spacing={2} style={{ textAlignLast: "start" }}>
                     <Grid item>
-                      <label>Email: </label>
+                      <label style={{ fontWeight: "bold", color:"white", paddingRight: "10px" }}>Email: </label>
                       <a href="mailto:smsureshi7@gmail.com">
                         smsureshi7@gmail.com
                       </a>
                     </Grid>
                     <Divider />
                     <Grid item>
-                      <label>Phone Number: </label>
+                      <label style={{ fontWeight: "bold", color:"white", paddingRight: "10px" }}>Phone Number: </label>
                       <a href="tel:+94713333059">+94713333059</a>
                     </Grid>
                     <Divider />
-                    <Grid item className="contact-icon-container">
+                    <Grid item className="contact-icon-container" style={{ justifyContent: "space-evenly" }}>
                       <a href="https://www.linkedin.com/in/sureshi-siriwardena-537453118/">
                         <LinkedInIcon fontSize="large" />
                       </a>
