@@ -29,7 +29,7 @@ function Home() {
                 <Typography
                   variant="h1"
                   component="div"
-                  sx={{
+                  style={{
                     fontWeight: "bold",
                     fontFamily: "Space Grotesk, sans-serif",
                     color: "white",

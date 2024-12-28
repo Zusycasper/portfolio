@@ -103,6 +103,8 @@ function About() {
                           fontFamily: "Space Grotesk, sans-serif",
                           textAlignLast: "center",
                           color: "white",
+                          backgroundColor: "#07233b",
+
                         }}
                       >
                         Developer
@@ -139,6 +141,7 @@ function About() {
                           fontFamily: "Space Grotesk, sans-serif",
                           textAlignLast: "center",
                           color: "white",
+                          backgroundColor: "#07233b",
                         }}
                       >
                         Desinger
