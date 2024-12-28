@@ -176,10 +176,10 @@ function About() {
             sx={{
               width: "100%",
               height: "100px",
-              borderRadius: 1,
-              bgcolor: "#040c16",
+              // borderRadius: 1,
+              backgroundImage: "linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%)",
               "&:hover": {
-                bgcolor: "#04160E",
+                bgcolor: "#040c16",
               },
             }}
           />

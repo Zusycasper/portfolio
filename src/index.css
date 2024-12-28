@@ -1,6 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 24px;
+  
   /* font-weight: 400; */
 
   color-scheme: light dark;
@@ -15,11 +16,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #040c16;
+  color: #1976d2;
   font-size: 16px;
   font-weight: 500;
 }

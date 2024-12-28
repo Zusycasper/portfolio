@@ -179,14 +179,18 @@ function Contact() {
             className="wave"
             sx={{
               width: "100%",
-              height: "100px",
-              borderRadius: 1,
-              bgcolor: "#040c16",
+              height: "50px",
+              textAlignLast: "center",
+              alignContent: "space-evenly",
+              // borderRadius: 1,
+              bgcolor: "#082742",
               "&:hover": {
-                bgcolor: "#04160E",
+                bgcolor: "#040c16",
               },
             }}
-          />
+          >
+          Designed and developed by ZusyCasper. © 2024. All rights reserved.
+          </Box>
         </div>
       </div>
       <Snackbar open={status === 'success' || status === 'error'} autoHideDuration={6000} onClose={() => setStatus(null)}>

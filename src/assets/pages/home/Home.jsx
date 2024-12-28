@@ -41,11 +41,7 @@ function Home() {
                   </span>
                   <br />
                   <p className="description-about-admin">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sunt corporis iure dolor, officiis facilis ex assumenda
-                    omnis voluptatibus pariatur corrupti aspernatur sit
-                    excepturi? Quibusdam, ipsam magni natus amet libero
-                    pariatur?
+                  Skilled in creating responsive, user-friendly web applications with technologies like React.js and Tailwind CSS. I focus on clean code, intuitive interfaces, and delivering high-quality solutions while staying updated with the latest tools and trends.
                   </p>
                 </Typography>
               </Grid>
@@ -69,7 +65,7 @@ function Home() {
             sx={{
               width: "100%",
               height: "100px",
-              borderRadius: 1,
+              // borderRadius: 1,
               bgcolor: "#040c16",
               "&:hover": {
                 bgcolor:"#04160E",
