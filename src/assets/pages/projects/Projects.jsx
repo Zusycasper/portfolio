@@ -218,47 +218,97 @@ const Projects = () => {
     ui: [
       {
         id: 1,
-        title: "Website Design for Marketing Agency Startup",
+        title: "BLOCKCHAIN INTEGRATION DIGITAL COMMUNITY BIOMASS POWER PLANT IN SRI LANKA",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
-        platform: "WordPress",
-        country: "USA",
+          "The Digital Community Biomass Power Plant system leverages local biomass resources to address Sri Lanka's energy and economic challenges. By integrating Blockchain technology and smart contracts, it ensures secure, transparent, and efficient energy transactions, fostering sustainability and community-driven renewable energy solutions. This approach promotes decentralized energy generation, peer-to-peer trading, and carbon credit management.",
+          images: [
+            {
+              src: "/Projects/Figma/coconut/coconutplantation.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/coconut/dashboard.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/coconut/profile.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/coconut/Report.png?height=50&width=100",
+            },
+
+          ],         type: "Figma Design - web",
+        languages: "none",
+        platform: "Figma",
+        country: "Thailand and Sri Lanka",
+        liveUrl: "none",
       },
       {
         id: 2,
-        title: "te Design for Marketing Agency Startup",
+        title: "BLOCKCHAIN INTEGRATION DIGITAL COMMUNITY BIOMASS POWER PLANT IN SRI LANKA",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
-        platform: "WordPress",
-        country: "USA",
+          "The Digital Community Biomass Power Plant system leverages local biomass resources to address Sri Lanka's energy and economic challenges. By integrating Blockchain technology and smart contracts, it ensures secure, transparent, and efficient energy transactions, fostering sustainability and community-driven renewable energy solutions. This approach promotes decentralized energy generation, peer-to-peer trading, and carbon credit management.",
+          images: [
+            {
+              src: "/Projects/Figma/coco-mobile/Desktop1.png?height=50&width=100",
+            },
+            
+
+          ],  
+        type: "Figma Design - mobile",
+        languages: "none",
+        platform: "Figma",
+        country: "Thailand and Sri Lanka",
+        liveUrl: "none",
       },
       {
         id: 3,
-        title: "3 Website Design for Marketing Agency Startup",
+        title: "MAINTANANCE MANAGEMENT SYSTEM",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
-        platform: "WordPress",
-        country: "USA",
+          "This maintenance management system is designed for CO2 power plants to streamline equipment tracking, schedule preventive maintenance, and efficiently manage resources. It ensures optimal performance and reliability of plant operations through well-organized workflows.",
+          images: [
+            {
+              src: "/Projects/Figma/maintanance-mgt/login page.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/maintanance-mgt/User Management.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/maintanance-mgt/Work Order design 9.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/maintanance-mgt/Work Request design 3.png?height=50&width=100",
+            },
+
+          ],        type: "Figma Design - web",
+        languages: "none",
+        platform: "Figma",
+        country: "Thailand",
+        liveUrl: "none",
       },
       {
         id: 4,
-        title: "4 Website Design for Marketing Agency Startup",
+        title: "OPERATION AND MAINTANANCE SYSTEM",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "/placeholder.svg?height=600&width=800",
-        type: "Website",
-        languages: "PHP, HTML, CSS, JS",
-        platform: "WordPress",
-        country: "USA",
+          "The O&M system for CO2 power plants is designed to optimize operations and maintenance processes by streamlining equipment tracking, scheduling preventive maintenance, and managing resources efficiently. It ensures reliability and sustainability in plant performance while minimizing downtime.",
+          images: [
+            {
+              src: "/Projects/Figma/omsystem/Login 2.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/omsystem/fuel Inventory.png?height=50&width=100",
+            },
+            {
+              src: "/Projects/Figma/omsystem/Heat and mass 1.png?height=50&width=100",
+            },
+            
+            {
+              src: "/Projects/Figma/omsystem/Utility dashboard.png?height=50&width=100",
+            },
+
+          ],          type: "Figma Design - web",
+        languages: "none",
+        platform: "Figma",
+        country: "Thailand",
+        liveUrl: "none",
       },
     ],
   };
