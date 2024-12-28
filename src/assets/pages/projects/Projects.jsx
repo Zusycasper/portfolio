@@ -321,9 +321,9 @@ const Projects = () => {
 
   return (
     <div className="project-container">
-      <Card>
+      <Card className="card-projects-full">
         <CardContent className="card-content-projects" sx={{ padding: "50px" }}>
-          <span className="website-owner-name">My Work</span>
+          <span className="website-owner-name" style={{color:"white"}}>My Work</span>
           <Typography
             variant="h4"
             component="div"
@@ -331,6 +331,7 @@ const Projects = () => {
               fontWeight: "bold",
               fontFamily: "Space Grotesk, sans-serif",
               paddingLeft: "50px",
+              color: "white",
             }}
           >
             My most recent projects
@@ -605,7 +606,7 @@ const Projects = () => {
           </div>
         </CardContent>
       </Card>
-      <div className="seperator">
+      {/* <div className="seperator">
         <div className="seperator-line">
           <Box
             className="wave"
@@ -615,12 +616,12 @@ const Projects = () => {
               borderRadius: 1,
               bgcolor: "#040c16",
               "&:hover": {
-                bgcolor: "#04160E",
+                bgcolor: "#040c16",
               },
             }}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
