@@ -15,7 +15,7 @@ import React from "react";
 function About() {
   return (
     <div>
-      <Card>
+      <Card className="about-card">
         <CardContent
           className="card-content-about"
           sx={{ padding: "200px 0 0 100px" }}
@@ -64,7 +64,7 @@ function About() {
                       variant="h4"
                       component="span" 
                       sx={{
-                        color: "#54CC9C",
+                        color: "#1976d2",
                         fontWeight: "bold",
                       }}
                     >
@@ -91,7 +91,7 @@ function About() {
                 </Typography>
                 <Box className="card-experience-container">
                   <Card className="card-experience">
-                    <CardContent>
+                    <CardContent className="card-experience-details">
                       <Typography
                         variant="h5"
                         sx={{
@@ -104,7 +104,7 @@ function About() {
                       >
                         Developer
                       </Typography>
-                      <Divider sx={{ border: "0.5px solid #54CC9C" }} />
+                      <Divider sx={{ border: "0.5px solidrgb(255, 255, 255)" }} />
 
                       <div className="column">
                         <div className="card-center">
@@ -139,7 +139,7 @@ function About() {
                       >
                         Desinger
                       </Typography>
-                      <Divider sx={{ border: "0.5px solid #54CC9C" }} />
+                      <Divider sx={{ border: "0.5px solidrgb(255, 255, 255)" }} />
 
                       <div className="column">
                         <div className="card-center">

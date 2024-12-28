@@ -15,9 +15,9 @@ function Home() {
 
   return (
     <div className="home-container">
-      <Card>
+      <Card className="home-card-container">
         <CardContent
-          className="card-content"
+          className="card-content-home"
           sx={{ padding: "200px 0 0 100px" }}
         >
           <Box sx={{ flexGrow: 1 }}>

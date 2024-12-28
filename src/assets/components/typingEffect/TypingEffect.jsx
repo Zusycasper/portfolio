@@ -49,7 +49,7 @@ const TypingEffect = () => {
         sx={{
           fontWeight: "bold",
           display: "inline",
-          color: "#54CC9C",
+          color: "#1976d2",
         }}
       >
         I'm a{" "}

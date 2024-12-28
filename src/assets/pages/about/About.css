@@ -13,7 +13,7 @@
     background-color: #0788ff33;
     background: rgba(var(--px-theme-rgb), .2);
     border-radius: 4px;
-    border: solid 0.5px #54CC9C;
+    border: solid 0.5px #1976d2;
     width: 350px;
     height: 345px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -21,10 +21,21 @@
     
 }
 
+.card-experience-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #0787ff0b; */
+    /* align-items: center; */
+}
+
 .card-experience-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    /* background-color: #0788ff33; */
     /* align-items: center; */
 }
 
@@ -89,7 +100,7 @@ span.website-owner-name{
 }
 
 .website-owner-name{
-    background: #54cc9c75;
+    background: #4d9feb72;
     border-radius: 4px;
     color: #fff;
     color: var(--px-white);
@@ -100,4 +111,18 @@ span.website-owner-name{
     line-height: 20px;
     padding: 5px 12px;
     text-transform: uppercase;
+}
+
+.about-card, .card-content-about{
+    background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
+    border-radius: 0%;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card-experience.css-1j74uew-MuiPaper-root-MuiCard-root{
+    background: #082742;
+
+}
+
+*{
+    color: #ffffff;
 }

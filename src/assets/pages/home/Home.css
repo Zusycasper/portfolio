@@ -1,5 +1,5 @@
 .website-owner-name-title{
-    background: #54cc9c75;
+    background: #4d9feb72;
     border-radius: 4px;
     color: #fff;
     color: var(--px-white);
@@ -38,14 +38,14 @@
 .home-container, .hs-banner, .seperator, .seperator-line    {
     text-align: left;
     text-align-last: start;
-    background-color: #0a0a0a;
+    /* background-color: #0a0a0a; */
     color: white;
 }
 
 .description-about-admin{
     text-align: left;
     text-align-last: start;
-    background-color: #0a0a0a;
+    /* background-color: #0a0a0a; */
     color: white;
     padding-right: 250px;
     font-size: 20px;
@@ -58,7 +58,7 @@
 }
 
 .admin-image{
-    background-color: #0a0a0a;
+    /* background-color: #0a0a0a; */
     color: white;
     width: 35%;
     height: 75%;
@@ -73,5 +73,9 @@
     position: absolute;
     top: 800px;
     left: 500px;
+}
+
+.home-container, .home-card-container, .card-content-home{
+    background: linear-gradient(180deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
 }
 
