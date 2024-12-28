@@ -91,7 +91,7 @@ function Contact() {
                 </Grid>
                 <Grid item xs={12} md={8}>
                   <Box className="contact-form-container">
-                    <Typography variant="h4" component="h4">
+                    <Typography variant="h4" component="h4" className="contact-form-title">
                       Share Review
                     </Typography>
                     <p
@@ -102,7 +102,7 @@ function Contact() {
                       position you are looking for, I would love to hear from
                       you.
                     </p>
-                    <form onSubmit={handleSubmit} className="contact-form" style={{ padding: "50px"}}>
+                    <form onSubmit={handleSubmit} className="contact-form" style={{ padding: "50px", color: "white" }}>
                       <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
                           <TextField
@@ -112,7 +112,8 @@ function Contact() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                          />
+                            InputLabelProps={{style: {color: "white"}}}
+                            InputProps={{style: {border: "1px solid white", color: "white"}}}                          />
                         </Grid>
                         <Grid item xs={12} md={6}>
                           <TextField
@@ -123,6 +124,8 @@ function Contact() {
                             value={formData.email}
                             onChange={handleChange}
                             required
+                            InputLabelProps={{style: {color: "white"}}}
+                            InputProps={{style: {border: "1px solid white", color: "white"}}}
                           />
                         </Grid>
                         <Grid item xs={12}>
@@ -133,6 +136,8 @@ function Contact() {
                             value={formData.subject}
                             onChange={handleChange}
                             required
+                            InputLabelProps={{style: {color: "white"}}}
+                            InputProps={{style: {border: "1px solid white", color: "white"}}}
                           />
                         </Grid>
                         <Grid item xs={12}>
@@ -145,6 +150,8 @@ function Contact() {
                             value={formData.message}
                             onChange={handleChange}
                             required
+                            InputLabelProps={{style: {color: "white"}}}
+                            InputProps={{style: {border: "1px solid white", color: "white"}}}
                           />
                         </Grid>
                         <Grid item xs={12}>
