@@ -1,13 +1,48 @@
-import React from "react";
-import { Box, Card, CardContent, Divider, Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-// import Box from '@mui/material/Box';
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid2";
+import React, { useState } from "react";
+import { Box, Card, CardContent, Divider, Typography, TextField, Button, Snackbar, Alert } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import "./Contact.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import CoPresentIcon from "@mui/icons-material/CoPresent";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrbbqjrr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus('error');
+    }
+  };
+
   return (
     <div className="contact-container">
       <Card className="contact-card-full">
@@ -20,7 +55,7 @@ function Contact() {
               
             <Box className="contact-box-header"/>
               <Grid className="contact-grid-container" container spacing={2}>
-                <Grid size={4}>
+                <Grid item xs={12} md={4}>
                   <img
                     src="/profile-pic (4).png"
                     alt="admin-pic"
@@ -31,10 +66,10 @@ function Contact() {
                       zIndex: "1",
                     }}
                   />
-                  <Grid item xs={8} container direction="column" spacing={2}>
+                  <Grid item container direction="column" spacing={2}>
                     <Grid item>
                       <label>Email: </label>
-                      <a href="mailto:0lNlK@example.com">
+                      <a href="mailto:smsureshi7@gmail.com">
                         smsureshi7@gmail.com
                       </a>
                     </Grid>
@@ -49,85 +84,80 @@ function Contact() {
                         <LinkedInIcon fontSize="large" />
                       </a>
                       <a href="https://github.com/Zusycasper/portfolio.git">
-                        <CoPresentIcon fontSize="large" />
+                        <GitHubIcon fontSize="large" />
                       </a>
                     </Grid>
                   </Grid>
                 </Grid>
-                <Grid size={8}>
+                <Grid item xs={12} md={8}>
                   <Box className="contact-form-container">
                     <Typography variant="h4" component="h4">
                       Share Review
                     </Typography>
                     <p
                       className="contact-form-description"
-                      style={{paddingLeft: "50px",paddingRight: "50px", textalignlast: "left" }}
+                      style={{paddingLeft: "50px",paddingRight: "50px", textAlign: "left" }}
                     >
                       Share your thoughts with me and If I am a good fit for the
                       position you are looking for, I would love to hear from
                       you.
                     </p>
-                    <form id="contact-form" className="contact-form" style={{ padding: "50px"}}>
-                      <div class="row gx-3 gy-4">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="form-label">Your Name</label>
-                            <input
-                              name="name"
-                              placeholder="Name *"
-                              class="form-control"
-                              type="text"
-                              required=""
-                              value=""
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="form-label">Your Email</label>
-                            <input
-                              name="email"
-                              placeholder="Email *"
-                              class="form-control"
-                              type="email"
-                              required=""
-                              value=""
-                            />
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group">
-                            <label class="form-label">Subject</label>
-                            <input
-                              name="subject"
-                              placeholder="Subject *"
-                              class="form-control"
-                              type="text"
-                              required=""
-                              value=""
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="form-label">Your message</label>
-                            <textarea
-                              name="message"
-                              placeholder="Your message *"
-                              rows="4"
-                              class="form-control"
-                              required=""
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="send">
-                            <button class="px-btn w-100" type="submit">
-                              Send Message
-                            </button>
-                          </div>
-                        </div>
-                      </div>
+                    <form onSubmit={handleSubmit} className="contact-form" style={{ padding: "50px"}}>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} md={6}>
+                          <TextField
+                            fullWidth
+                            label="Your Name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                          />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                          <TextField
+                            fullWidth
+                            label="Your Email"
+                            name="email"
+                            type="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                          />
+                        </Grid>
+                        <Grid item xs={12}>
+                          <TextField
+                            fullWidth
+                            label="Subject"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleChange}
+                            required
+                          />
+                        </Grid>
+                        <Grid item xs={12}>
+                          <TextField
+                            fullWidth
+                            label="Your message"
+                            name="message"
+                            multiline
+                            rows={4}
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                          />
+                        </Grid>
+                        <Grid item xs={12}>
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                            fullWidth
+                          >
+                            Send Message
+                          </Button>
+                        </Grid>
+                      </Grid>
                     </form>
                   </Box>
                 </Grid>
@@ -152,8 +182,14 @@ function Contact() {
           />
         </div>
       </div>
+      <Snackbar open={status === 'success' || status === 'error'} autoHideDuration={6000} onClose={() => setStatus(null)}>
+        <Alert onClose={() => setStatus(null)} severity={status === 'success' ? 'success' : 'error'} sx={{ width: '100%' }}>
+          {status === 'success' ? 'Message sent successfully!' : 'Failed to send message. Please try again.'}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
 
 export default Contact;
+
