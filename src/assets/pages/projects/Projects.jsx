@@ -321,7 +321,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="project-container">
+    <div className="project-container" id="projects">
       <Card className="card-projects-full">
         <CardContent className="card-content-projects" sx={{ padding: "50px" }}>
           <span className="website-owner-name" style={{color:"white"}}>My Work</span>

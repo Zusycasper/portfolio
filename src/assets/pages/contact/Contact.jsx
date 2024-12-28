@@ -44,7 +44,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <Card className="contact-card-full">
         <CardContent
           className="card-content-contact"

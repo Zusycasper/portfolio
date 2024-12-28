@@ -14,7 +14,7 @@ import React from "react";
 
 function About() {
   return (
-    <div>
+    <div className="about-container" id="about">
       <Card className="about-card">
         <CardContent
           className="card-content-about"

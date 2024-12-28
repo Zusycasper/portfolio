@@ -64,7 +64,7 @@ img.admin-image2{
     width: 570px;
     height: 570px;
     position: absolute;
-    top: 1100px;
+    top: 920px;
     left: 50px;
 }
 
@@ -72,7 +72,7 @@ img.gif-rotate{
     width: 525px;
     height: 300px;
     position: absolute;
-    top: 1000px;
+    top: 810px;
     left: -1200px;
     right: 0;
     bottom: 0;
@@ -84,7 +84,7 @@ img.gif-rotate-2{
     width: 350px;
     height: 200px;
     position: absolute;
-    top: 1700px;
+    top: 1500px;
     left: -500px;
     right: 0;
     bottom: 0;

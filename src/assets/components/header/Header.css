@@ -1,13 +1,19 @@
 /* header.css */
 
-header {
-    position: sticky;
+header, .header-card, .header-card-content {
+    /* position: sticky; */
     top: 0;
     z-index: 1;
-    background-color: #000000;
+    background-color: #ff1111;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .125rem .25rem rgba(55,55,55,.075);
+    width: 100%;
+    position: fixed;    
+    transition: all .35s ease;
+    z-index: 111;
+    background-color: var(--px-black);
   }
+
   
   nav {
     margin: 0 auto;
