@@ -8,7 +8,7 @@
     border-radius: 10px;
     border: solid 1px linear-gradient(90deg, #ffffff00 30%, #265b8b1a 100%);
     position: absolute;
-    top: 2498px;
+    top: 2400px;
     left: 112px;
 
 }
@@ -38,15 +38,19 @@
     text-align: left;
 }
 
-.contact-container, .contact-card-full, .card-content-contact{
+div.contact-container, .contact-card-full, .card-content-contact{
     justify-content: center;
     align-items: center;
     /* display: flex; */
     background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
 }
 
-.contact-form-title, .contact-form-description, textfields, .contact-form-button{
+.contact-form-title, .contact-form-description, .contact-form-button{
     color: #ffffff;
+}
+
+div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.contact-card-full.css-1j74uew-MuiPaper-root-MuiCard-root{
+    background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
 }
 
 
