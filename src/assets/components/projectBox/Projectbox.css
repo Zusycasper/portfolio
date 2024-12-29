@@ -3,7 +3,7 @@
     background: #4d9feb72;
     border-radius: 4px;
     color: #000000;
-    color: var(--px-white);
+    /* color: var(--px-white); */
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
@@ -25,7 +25,7 @@
     align-items: center;
     padding: 20px;
     margin: 20px;
-    background: var(--px-white);
+    /* background: var(--px-white); */
 }
 
 div.project-box{

@@ -1,7 +1,7 @@
 .website-owner-name-title{
     background: #4d9feb72;
     color: #fff;
-    color: var(--px-white);
+    /* color: var(--px-white); */
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
@@ -15,7 +15,7 @@
     background: #0788ff33;
     background: rgba(var(--px-theme-rgb), .2);
     color: #fff;
-    color: var(--px-white);
+    /* color: var(--px-white); */
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
