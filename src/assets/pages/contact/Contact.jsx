@@ -53,7 +53,6 @@ function Contact() {
           <Box className="contact-box">
             <Box className="contact-box-content">
               
-            <Box className="contact-box-header"/>
               <Grid className="contact-grid-container" container spacing={2}>
                 <Grid item xs={12} md={4}>
                   <img
