@@ -1,65 +1,125 @@
-.contact-box-header{
+div.MuiCardContent-root.card-content-contact.css-q7b4tv-MuiCardContent-root {
+    justify-items: center;
+}
+
+.contact-box-header {
     box-sizing: border-box;
-    padding: 40px;
-    gap: 20px;
-    width: 1294px;
-    height: 170px;
+    padding: 20px;
+    gap: 10px;
+    width: 90%; /* Use percentages for responsive width */
+    height: auto; /* Adjust height dynamically */
     background: linear-gradient(90deg, #ffffff00 30%, #265b8b1a 100%);
     border-radius: 10px;
     border: solid 1px linear-gradient(90deg, #ffffff00 30%, #265b8b1a 100%);
-    position: absolute;
-    top: 2235px;
-    left: 112px;
-
+    position: relative; /* Avoid absolute positioning for better responsiveness */
+    margin: 20px auto; /* Center on smaller screens */
 }
 
-.contact-box-content{
+.contact-box-content {
     box-sizing: border-box;
-    padding: 40px;
-    gap: 20px;
-    width: 1294px;
+    padding: 20px;
+    gap: 10px;
+    width: 90%; /* Adjust width for responsiveness */
     background: #265b8b1a;
     border-radius: 10px;
     border: solid 1px #dceeff1a;
+    margin: auto;
 }
 
-.contact-box{
+.contact-box {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1294px;
-    /* background: #54CC9C; */
-    border-radius: 10px;
+    width: 100%; /* Use full width */
 }
 
-.form-group{
-    text-align: left;
-}
-
-div.contact-container, .contact-card-full, .card-content-contact{
+.contact-grid-container {
     justify-content: center;
     align-items: center;
-    /* display: flex; */
-    background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
 }
 
-.contact-form-title, .contact-form-description, .contact-form-button{
+div.contact-container,
+.contact-card-full,
+.card-content-contact {
+    background: linear-gradient(
+        90deg,
+        #07233b 1.67%,
+        #041d34 39.95%,
+        #04192d 58.24%,
+        #040e18 80.28%,
+        #050c16 101.48%
+    );
+}
+
+.contact-form-title,
+.contact-form-description,
+.contact-form-button {
     color: #ffffff;
+    text-align: center; /* Center text for better appearance on smaller screens */
 }
 
-div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.contact-card-full.css-1j74uew-MuiPaper-root-MuiCard-root{
-    background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
-    border: 1px solid #040e18;
-    border-radius: 0 !important;
+@media screen and (max-width: 768px) {
+    .contact-box-header,
+    .contact-box-content {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .contact-box {
+        width: 95%;
+    }
+
+    .contact-grid-container {
+        flex-direction: column;
+    }
+
+    .contact-form-description {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .MuiCardContent-root.card-content-contact.css-8nv0gy {
+        padding: 10px;
+    }
+
+    .MuiGrid-root {
+        width: 100%;
+    }
 }
 
-div.MuiCardContent-root.card-content-contact.css-8nv0gy{
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-around;
+@media screen and (max-width: 480px) {
+    .contact-box-header,
+    .contact-box-content {
+        padding: 5px;
+        width: 100%;
+    }
 
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact-form-container {
+        padding: 20px 5px;
+    }
+
+    .contact-form-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-form-description {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    div.MuiCardContent-root.card-content-contact.css-q7b4tv-MuiCardContent-root {
+        justify-items: center;
+    }
 }
-

@@ -73,9 +73,9 @@
       display: none;
     }
   
-    /* .card-content-home {
-      padding: 50px 20px !important;
-    } */
+    .card-content-home {
+      padding: 200px 20px 20px 20px !important;
+    }
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {

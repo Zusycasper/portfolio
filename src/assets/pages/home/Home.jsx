@@ -18,12 +18,12 @@ function Home() {
       <Card className="home-card-container">
         <CardContent
           className="card-content-home"
-          // sx={{ 
-          //   padding: { 
-          //     xs: "100px 20px 50px", 
-          //     md: "200px 0 0 100px" 
-          //   } 
-          // }}
+          sx={{ 
+            padding: { 
+              xs: "100px 20px 50px", 
+              md: "200px 0 0 100px" 
+            } 
+          }}
         >
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>

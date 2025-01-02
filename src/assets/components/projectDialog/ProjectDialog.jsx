@@ -55,7 +55,7 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
             position: 'absolute',
             right: 8,
             top: 8,
-            color: 'grey.500',
+            color: 'black',
             zIndex: 2,
           }}
         >
@@ -106,7 +106,7 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                   sx={{
                     color: 'black',
                     bgcolor: 'rgba(240, 240, 240, 0.18)',
-                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.8)' },
+                    '&:hover': { bgcolor: 'rgba(71, 77, 255, 0.8)' },
                   }}
                 >
                   <ChevronLeft size={30} />
@@ -115,7 +115,7 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                   onClick={() => handleProjectChange('next')}
                   sx={{
                     bgcolor: 'rgba(240, 240, 240, 0.18)',
-                    '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.8)' },
+                    '&:hover': { bgcolor: 'rgba(71, 77, 255, 0.8)' },
                   }}
                 >
                   <ChevronRight size={30} />
