@@ -1,16 +1,15 @@
+import React from "react";
 import {
   Card,
   CardContent,
   Box,
   Typography,
   Grid,
-  CardHeader,
   Divider,
 } from "@mui/material";
 import "./About.css";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
-import React from "react";
 
 function About() {
   return (
@@ -18,35 +17,33 @@ function About() {
       <Card className="about-card">
         <CardContent
           className="card-content-about"
-          sx={{ padding: "200px 0 0 100px" }}
+          sx={{
+            padding: { md: "200px 0 0 100px" },
+          }}
         >
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <div className="admin-photo">
                   <img
                     className="gif-rotate"
                     src="/spin-logo.gif"
-                    alt="gif"
+                    alt="Spinning logo"
                   />
                   <img
                     className="gif-rotate-2"
                     src="/spin-logo.gif"
-                    alt="gif2"
+                    alt="Second spinning logo"
                   />
-
                   <img
                     className="admin-image2"
                     src="/blue-background-pic.png"
-                    alt="admin-image"
+                    alt="Admin"
                   />
                 </div>
               </Grid>
-              <Grid className="website-owner-details" item xs={8}>
-                <span
-                  className="website-owner-name"
-                  style={{ color: "white" }}
-                >
+              <Grid className="website-owner-details" item xs={12} md={8}>
+                <span className="website-owner-name" style={{ color: "white" }}>
                   About me
                 </span>
                 <Typography>
@@ -56,8 +53,9 @@ function About() {
                     sx={{
                       fontWeight: "bold",
                       fontFamily: "Space Grotesk, sans-serif",
-                      paddingLeft: "50px",
+                      paddingLeft: { xs: "0", md: "50px" },
                       color: "white",
+                      fontSize: { xs: "1.5rem", md: "2.125rem" },
                     }}
                   >
                     I'm an experienced{" "}
@@ -67,6 +65,7 @@ function About() {
                       sx={{
                         color: "#1976d2",
                         fontWeight: "bold",
+                        fontSize: "inherit",
                       }}
                     >
                       front-end developer
@@ -75,14 +74,7 @@ function About() {
                   <br />
                   <span className="typed-text"></span>
                   <br />
-                  {/* error in p */}
-                  <p
-                    className="description"
-                    style={{
-                      fontSize: "16px",
-                      color: "white",
-                    }}
-                  >
+                  <p className="description">
                     Currently employed at CO2 Pvt. Ltd. as a Frontend Developer,
                     specializing in building user-friendly and visually
                     appealing web interfaces. Possess hands-on experience with
@@ -101,27 +93,25 @@ function About() {
                           fontWeight: 500,
                           lineHeight: 1.5,
                           fontFamily: "Space Grotesk, sans-serif",
-                          textAlignLast: "center",
+                          textAlign: "center",
                           color: "white",
                           backgroundColor: "#07233b",
-
                         }}
                       >
                         Developer
                       </Typography>
-                      <Divider sx={{ border: "0.5px solidrgb(255, 255, 255)" }} />
-
+                      <Divider sx={{ border: "0.5px solid rgb(255, 255, 255)" }} />
                       <div className="column">
                         <div className="card-center">
                           <span>
                             <i className="developer"></i>
                           </span>
-                          <h3 className="experience-number" style={{ color: "white" , paddingTop: "20px" }}>
+                          <h3 className="experience-number" style={{ color: "white", paddingTop: "20px" }}>
                             <DeveloperModeIcon color="primary" sx={{ marginBottom: "20px" }} />
                             <br />
                             1+
                           </h3>
-                          <p className="experinece-text" style={{ color: "white" }}>
+                          <p className="experience-text">
                             HTML, CSS, JavaScript, React.JS, Bootstrap,
                             Tailwind, Material UI, Redux, Express.js, MySQL,
                             PHP, GIT version control, API
@@ -139,15 +129,14 @@ function About() {
                           fontWeight: 500,
                           lineHeight: 1.5,
                           fontFamily: "Space Grotesk, sans-serif",
-                          textAlignLast: "center",
+                          textAlign: "center",
                           color: "white",
                           backgroundColor: "#07233b",
                         }}
                       >
-                        Desinger
+                        Designer
                       </Typography>
-                      <Divider sx={{ border: "0.5px solidrgb(255, 255, 255)" }} />
-
+                      <Divider sx={{ border: "0.5px solid rgb(255, 255, 255)" }} />
                       <div className="column">
                         <div className="card-center">
                           <span>
@@ -158,11 +147,11 @@ function About() {
                             <br />
                             1+
                           </h3>
-                          <p className="experinece-text" style={{ color: "white" }}>
+                          <p className="experience-text">
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
                           </p>
-                          <p className="dummy-text">
+                          <p className="dummy-text" style={{ color: "transparent" }}>
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
                           </p>
@@ -176,8 +165,8 @@ function About() {
           </Box>
         </CardContent>
       </Card>
-      <div className="seperator">
-        <div className="seperator-line">
+      <div className="separator">
+        <div className="separator-line">
           <Box
             className="wave"
             sx={{
@@ -196,3 +185,4 @@ function About() {
 }
 
 export default About;
+

@@ -1,129 +1,172 @@
-.description{
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: lowercase;
-    padding-bottom: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
+.about-container,
+.about-card,
+.card-content-about {
+  background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
 }
 
-.card-experience{
-    background-color: #0788ff33;
-    border: solid 0.5px #1976d2;
-    width: 350px;
-    height: 345px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: lowercase;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  color: white;
 }
 
+.card-experience {
+  background-color: #0788ff33;
+  border: solid 0.5px #1976d2;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  min-height: 345px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
+}
 
-.card-experience-details{
-    display: flex;
+.card-experience-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #07233b;
+  height: 100%;
+}
+
+.card-experience-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-center {
+  text-align: center;
+}
+
+.experience-text {
+  font-weight: 600;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.website-owner-name {
+  background: #4d9feb72;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 20px;
+  padding: 5px 12px;
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.admin-photo {
+  position: relative;
+  width: 100%;
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.admin-image2 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 200px;
+  left: 0;
+}
+
+.gif-rotate,
+.gif-rotate-2 {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  animation: rotate 10s linear infinite;
+}
+
+.gif-rotate {
+  top: 0px;
+  left: -15%;
+}
+
+.gif-rotate-2 {
+  top: 550px;
+  right: -15%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card-experience,
+.css-1j74uew-MuiPaper-root-MuiCard-root {
+  border: 1px solid #040e18;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .description {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .card-experience-container {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #07233b;
-    /* align-items: center; */
+  }
+
+  .card-experience {
+    width: 100%;
+    max-width: none;
+  }
+
+  .website-owner-name {
+    margin-left: 0;
+  }
+
+  .admin-photo {
+    max-width: 300px;
+    top: -60%;
+    left: 0%;
+  }
+
+  .gif-rotate,
+  .gif-rotate-2 {
+    width: 60%;
+  }
+
+  .gif-rotate {
+    top:60%;
+    left: -40%;
+  }
+
+  .gif-rotate-2 {
+    top: 150%;
+    right: -10%;
+  }
 }
 
-.card-experience-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /* background-color: #0788ff33; */
-    /* align-items: center; */
-}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-experience {
+    width: calc(50% - 10px);
+  }
 
-.card-center{
-    text-align-last: center;
-}
-
-
-
-.experinece-text{
-    /* font-Size: "1.7rem"; */
-    font-weight: 600;
-    line-height: 1.6;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    margin-bottom: 20px;
-                              
-}
-
-.dummy-text{
-    color: transparent;
-}
-
-span.website-owner-name{
-    margin-left: 50px;
-}
-
-img.admin-image2{
-    width: 570px;
-    height: 570px;
-    position: absolute;
-    top: 920px;
-    left: 50px;
-}
-
-img.gif-rotate{
-    width: 525px;
-    height: 300px;
-    position: absolute;
-    top: 810px;
-    left: -1200px;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    animation: rotate 1s infinite;
-}
-
-img.gif-rotate-2{    
-    width: 350px;
-    height: 200px;
-    position: absolute;
-    top: 1500px;
-    left: -500px;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    animation: rotate 1s infinite;
-}
-
-span.website-owner-name{
-    margin-bottom: 10px;
-}
-
-.website-owner-name{
-    background: #4d9feb72;
-    color: #fff;
-    /* color: var(--px-white); */
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    line-height: 20px;
-    padding: 5px 12px;
-    text-transform: uppercase;
-}
-
-.about-card, .card-content-about{
-    background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
-    /* border-radius: 0%; */
-}
-
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card-experience.css-1j74uew-MuiPaper-root-MuiCard-root{
-    /* background: #082742; */
-    border: 1px solid #040e18;
-    border-radius: 0 !important;
-
-}
-
-.css-1j74uew-MuiPaper-root-MuiCard-root{
-    /* background: #082742; */
-    border: 0px solid #07233b;
-    border-radius: 0 !important;
+  .admin-photo {
+    max-width: 400px;
+  }
 }
 
