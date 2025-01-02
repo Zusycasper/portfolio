@@ -20,17 +20,19 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
     if (initialProject && projects) {
       const index = projects.findIndex(p => p.id === initialProject.id);
       setCurrentProjectIndex(index !== -1 ? index : 0);
+      setCarouselIndex(0); // Reset carousel index to 0 on initial load
     }
   }, [initialProject, projects]);
 
   const handleProjectChange = (direction) => {
     if (!projects || projects.length === 0) return;
 
-    setCurrentProjectIndex(prev => {
-      const newIndex = direction === 'next'
-        ? (prev === projects.length - 1 ? 0 : prev + 1)
-        : (prev === 0 ? projects.length - 1 : prev - 1);
-      setCarouselIndex(0); // Reset carousel index when changing projects
+    setCurrentProjectIndex((prevIndex) => {
+      const newIndex =
+        direction === 'next'
+          ? (prevIndex + 1) % projects.length
+          : (prevIndex - 1 + projects.length) % projects.length;
+      setCarouselIndex(0); // Reset carousel index when switching projects
       return newIndex;
     });
   };
@@ -54,7 +56,7 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
             right: 8,
             top: 8,
             color: 'grey.500',
-            zIndex: 1,
+            zIndex: 2,
           }}
         >
           <X size={24} />
@@ -78,10 +80,10 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                           src={image.src}
                           alt={image.caption}
                           className="object-cover"
-                          style={{ 
-                            width: "700px",
+                          style={{
+                            width: "100%",
                             height: "450px",
-                           }}
+                          }}
                         />
                         <Carousel.Caption className="bg-black bg-opacity-50 rounded p-3">
                           <h3 className="text-xl font-bold">{image.caption}</h3>
@@ -105,32 +107,26 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                     color: 'black',
                     bgcolor: 'rgba(240, 240, 240, 0.18)',
                     '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.8)' },
-                    position: 'absolute',
-                    top:240,
-                    left:0,
                   }}
                 >
-                  <ChevronLeft size={50} color="black" />
+                  <ChevronLeft size={30} />
                 </IconButton>
                 <IconButton
                   onClick={() => handleProjectChange('next')}
                   sx={{
                     bgcolor: 'rgba(240, 240, 240, 0.18)',
                     '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.8)' },
-                    position: 'absolute',
-                    top:240,
-                    left:1120,
                   }}
                 >
-                  <ChevronRight size={50} color="black"/>
+                  <ChevronRight size={30} />
                 </IconButton>
               </div>
             </Grid>
 
             {/* Right side - Content */}
             <Grid item xs={12} md={5}>
-              <Box sx={{ p: 4 }}>
-                <DialogTitle sx={{ p: 0, mb: 2 }}>
+              <Box sx={{ p: { xs: 2, md: 4 } }}>
+                <DialogTitle sx={{ p: 0, mb: 2, fontSize: { xs: '1.5rem', md: '2rem' } }}>
                   {currentProject.title}
                 </DialogTitle>
 
@@ -139,116 +135,45 @@ const ProjectDialog = ({ open, onClose, projects, initialProject }) => {
                 </Typography>
 
                 <Grid container spacing={2} sx={{ mt: 4 }}>
-                  <Grid item xs={4}>
-                    <Typography variant="subtitle2" color="text.secondary">
-                      Type:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body2">
-                      {currentProject.type}
-                    </Typography>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <Typography variant="subtitle2" color="text.secondary">
-                      Languages:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body2">
-                      {currentProject.languages}
-                    </Typography>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <Typography variant="subtitle2" color="text.secondary">
-                      Platform:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body2">
-                      {currentProject.platform}
-                    </Typography>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <Typography variant="subtitle2" color="text.secondary">
-                      Country:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body2">
-                      {currentProject.country}
-                    </Typography>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <Typography variant="subtitle2" color="text.secondary">
-                      Live URL:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body2">
-                      <a 
-                        href={currentProject.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style={{ color: '#4a90e2', textDecoration: 'none' }}
-                      >
-                        {currentProject.liveUrl}
-                      </a>
-                    </Typography>
-                  </Grid>
+                  {[
+                    { label: "Type", value: currentProject.type },
+                    { label: "Languages", value: currentProject.languages },
+                    { label: "Platform", value: currentProject.platform },
+                    { label: "Country", value: currentProject.country },
+                    { label: "Live URL", value: currentProject.liveUrl, isLink: true },
+                  ].map((item, index) => (
+                    <React.Fragment key={index}>
+                      <Grid item xs={4}>
+                        <Typography variant="subtitle2" color="text.secondary">
+                          {item.label}:
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={8}>
+                        <Typography variant="body2">
+                          {item.isLink ? (
+                            <a
+                              href={item.value}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ color: '#4a90e2', textDecoration: 'none', wordBreak: 'break-word' }}
+                            >
+                              {item.value}
+                            </a>
+                          ) : (
+                            item.value
+                          )}
+                        </Typography>
+                      </Grid>
+                    </React.Fragment>
+                  ))}
                 </Grid>
               </Box>
             </Grid>
           </Grid>
         </DialogContent>
       </Box>
-
-      {/* Custom styles for Bootstrap Carousel */}
-      <style jsx global>{`
-        .carousel-caption {
-          left: 0;
-          right: 0;
-          bottom: 0;
-          padding: 20px;
-
-          
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-          width: 1px;
-          z-index: 2;
-
-
-        }
-          .carousel-control-next-icon, .carousel-control-prev-icon {
-                  background-color: transparent;
-                  width: 5px;
-                  height: 5px;
-                  border-radius: 15px;
-
-
-          }
-
-        .carousel-indicators {
-          z-index: 2;
-          margin-bottom: 1rem;
-        }
-
-        .carousel-indicators button {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          margin: 0 5px;
-        }
-      `}</style>
     </Dialog>
   );
 };
 
 export default ProjectDialog;
-

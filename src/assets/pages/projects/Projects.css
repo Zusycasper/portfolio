@@ -1,8 +1,6 @@
-
-.website-owner-name{
+.website-owner-name {
     background: #4d9feb72;
     color: #000000;
-    /* color: var(--px-white); */
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
@@ -10,107 +8,99 @@
     line-height: 20px;
     padding: 5px 12px;
     text-transform: uppercase;
-}
-
-.project-box{
+  }
+  
+  .project-box {
     background-color: #fff;
     background: rgba(var(--px-theme-rgb), .2);
     border-radius: 10px;
-    /* border: solid 2px #54CC9C; */
-    width: 350px;
-    height: 390px;
+    width: 100%;
+    height: auto;
     box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.341);
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 20px;
-    /* background: var(--px-white); */
-}
-
-div.project-box{
+    margin: 20px 0;
     background-color: #f4faff;
-}
-
-div.project-box:hover{
+  }
+  
+  .project-box:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
-}
-
-.all-projects-container-inline{
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
+  
+  .all-projects-container-inline {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-}
-
-.developer-projects, .wordpress-projects, .figma-projects{
-    /* border-radius: 8px; */
+    align-items: stretch;
+  }
+  
+  .developer-projects,
+  .wordpress-projects,
+  .figma-projects {
     overflow: hidden;
     position: relative;
-}
-
-.wordpress-projects-image, .developer-projects-image, .figma-projects-image{
+  }
+  
+  .wordpress-projects-image,
+  .developer-projects-image,
+  .figma-projects-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-div.project-type, .project-type-container, .arrow-right, .project-box{
+  }
+  
+  div.project-type,
+  .project-type-container,
+  .arrow-right,
+  .project-box {
     background-color: #f4faff;
-
-}
-
-p.project-description{
+  }
+  
+  p.project-description {
     background-color: #f1f8ff;
-}
-
-.arrow-right{
-    justify-self: center;
-
-}
-
-.project-box{
-    background-color: #f1f8ff;
-
-}
-
-div.project-type.MuiBox-root.css-0{
-    background-color: #f1f8ff;
-    justify-items: left;
-    text-align: left;
-    /* padding-left: 20px; */
-
-}
-
-div.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.project-description-container.css-11nsb57-MuiGrid-root{
-    background-color: #f1f8ff;
-
-}
-
-div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-10.css-17p3wh3-MuiGrid-root{
-    background-color: #f1f8ff;
-
-}
-
-div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-2.css-1o1wdp8-MuiGrid-root{
-    padding-left: 0px;
-}
-
-div.MuiBox-root.css-1wcaknn{
-    margin-top: 30px;
-}
-
-.project-button:hover {
+  }
+  
+  .project-button:hover {
     border-color: #1976d2;
     background-color: #040c16;
     color: #ffffff;
   }
-
-
-.card-content-projects{
+  
+  .card-content-projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
-}
+  }
+  
+  @media (max-width: 768px) {
+    .website-owner-name {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+  
+    .project-box {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .all-projects-container-inline {
+      flex-direction: column;
+    }
+  
+    .card-content-projects {
+      padding: 20px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .project-box {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  

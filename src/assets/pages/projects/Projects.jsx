@@ -6,6 +6,8 @@ import {
   Typography,
   Grid,
   Button,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import "./Projects.css";
@@ -14,6 +16,8 @@ import ProjectDialog from "../../components/projectDialog/ProjectDialog";
 const Projects = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const projectsData = {
     frontend: [
@@ -323,7 +327,7 @@ const Projects = () => {
   return (
     <div className="project-container" id="projects">
       <Card className="card-projects-full">
-        <CardContent className="card-content-projects" sx={{ padding: "50px" }}>
+        <CardContent className="card-content-projects" sx={{ padding: { xs: "20px", md: "50px" } }}>
           <span className="website-owner-name" style={{color:"white"}}>My Work</span>
           <Typography
             variant="h4"
@@ -331,280 +335,77 @@ const Projects = () => {
             sx={{
               fontWeight: "bold",
               fontFamily: "Space Grotesk, sans-serif",
-              paddingLeft: "50px",
+              paddingLeft: { xs: "20px", md: "50px" },
               color: "white",
+              fontSize: { xs: "1.5rem", md: "2.125rem" },
             }}
           >
             My most recent projects
           </Typography>
-          <div className="all-projects-container-inline">
-            <div className="project-box">
-              <div
-                className="developer-projects"
-                style={{ backgroundColor: "#f1f8ff" }}
-              >
-                <img
-                  className="developer-projects-image"
-                  src="/Projects/WebApplications/fuelmanagement/kk-green.png"
-                  alt="project"
-                  style={{ width: "100%", height: "220px" }}
-                />
-              </div>
-              <div
-                className="project-type-container"
-                style={{ marginTop: "70px" }}
-              >
-                <Grid
-                  className="project-description-container"
-                  container
-                  spacing={2}
-                >
-                  <Grid item xs={8}>
-                    <Box className="project-type">
-                      <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{
-                          fontSize: "1.25rem",
-                          fontWeight: "bold",
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          paddingLeft: "5px",
-                          color: "black",
-                          backgroundColor: "#f1f8ff",
-                        }}
-                      >
-                        Web Development
-                      </Typography>
-                      <span
-                        className="project-description"
-                        style={{
-                          marginTop: "10px",
-                          marginBottom: "10px",
-                          color: "black",
-                          paddingLeft: "5px",
-                        }}
-                      >
-                        Frontend Development
-                      </span>
-                    </Box>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={4}
-                    sx={{
-                      backgroundColor: "#f1f8ff",
-                      alignContent: "center",
-                      paddingLeft: "7px",
-                    }}
-                  >
-                    <Box className="arrow-right">
-                      <Button
-                        variant="contained"
-                        onClick={() => handleProjectClick("frontend")}
-                        sx={{
-                          backgroundColor: "1976d2",
-                          border: "1px solid #1976d2",
-                        }}
-                      >
-                        <KeyboardArrowRightIcon
+          <Box className="all-projects-container-inline">
+            {["frontend", "wordpress", "ui"].map((category, index) => (
+              <Box key={index} className="project-box" sx={{ width: { xs: '100%', md: '30%' }, marginBottom: { xs: '20px', md: '0' } }}>
+                <div className={`${category}-projects`} style={{ backgroundColor: "#f1f8ff" }}>
+                  <img
+                    className={`${category}-projects-image`}
+                    src={projectsData[category][0].images[0].src}
+                    alt="project"
+                    style={{ width: "100%", height: "220px", objectFit: "cover" }}
+                  />
+                </div>
+                <div className="project-type-container" style={{ marginTop: "20px" }}>
+                  <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={8}>
+                      <Box className="project-type">
+                        <Typography
+                          variant="h5"
+                          component="div"
                           sx={{
+                            fontSize: { xs: "1rem", md: "1.25rem" },
+                            fontWeight: "bold",
+                            fontFamily: "Arial, Helvetica, sans-serif",
+                            paddingLeft: "5px",
                             color: "black",
-                            "&:hover": {
-                              color: "white",
-                            },
+                            backgroundColor: "#f1f8ff",
                           }}
-                        />
-                      </Button>
-                    </Box>
-                  </Grid>
-                </Grid>
-              </div>
-            </div>
-
-            {/* web designer projects wordpress */}
-
-            <div className="project-box">
-              <div
-                className="wordpress-projects"
-                style={{ backgroundColor: "#f1f8ff" }}
-              >
-                <img
-                  className="wordpress-projects-image"
-                  src="/Projects/Wordpress/co2/co2website.png"
-                  alt="project"
-                  style={{ width: "100%", height: "220px" }}
-                />
-              </div>
-              <div
-                className="project-type-container"
-                style={{ marginTop: "70px" }}
-              >
-                <Grid
-                  className="project-description-container"
-                  container
-                  spacing={2}
-                >
-                  <Grid item xs={8}>
-                    <Box className="project-type">
-                      <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{
-                          fontSize: "1.25rem",
-                          fontWeight: "bold",
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          paddingLeft: "5px",
-                          color: "black",
-                          backgroundColor: "#f1f8ff",
-                        }}
-                      >
-                        Web Design
-                      </Typography>
-                      <span
-                        className="project-description"
-                        style={{
-                          marginTop: "10px",
-                          marginBottom: "10px",
-                          color: "black",
-                          paddingLeft: "5px",
-                        }}
-                      >
-                        WordPress Website Design
-                      </span>
-                    </Box>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={4}
-                    sx={{
-                      backgroundColor: "#f1f8ff",
-                      alignContent: "center",
-                      paddingLeft: "7px",
-                    }}
-                  >
-                    <Box className="arrow-right">
-                      <Button
-                        variant="contained"
-                        onClick={() => handleProjectClick("wordpress")}
-                        sx={{
-                          backgroundColor: "1976d2",
-                          border: "1px solid #1976d2",
-                        }}
-                      >
-                        <KeyboardArrowRightIcon
+                        >
+                          {category === "frontend" ? "Web Development" : category === "wordpress" ? "Web Design" : "UI/UX"}
+                        </Typography>
+                        <span className="project-description" style={{ marginTop: "10px", marginBottom: "10px", color: "black", paddingLeft: "5px" }}>
+                          {category === "frontend" ? "Frontend Development" : category === "wordpress" ? "WordPress Website Design" : "User Interface Designs"}
+                        </span>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Box className="arrow-right" sx={{ textAlign: 'right' }}>
+                        <Button
+                          variant="contained"
+                          onClick={() => handleProjectClick(category)}
                           sx={{
-                            color: "black",
-                            "&:hover": {
-                              color: "white",
-                            },
+                            backgroundColor: "1976d2",
+                            border: "1px solid #1976d2",
+                            minWidth: 'auto',
+                            padding: { xs: '4px 8px', md: '6px 16px' },
                           }}
-                        />
-                      </Button>
-                    </Box>
+                        >
+                          <KeyboardArrowRightIcon sx={{ color: "black", "&:hover": { color: "white" } }} />
+                        </Button>
+                      </Box>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </div>
-            </div>
-
-            {/* ui/ux designer figma */}
-            <div className="project-box">
-              <div
-                className="figma-projects"
-                style={{ backgroundColor: "#f1f8ff" }}
-              >
-                <img
-                  className="figma-projects-image"
-                  src="/Projects/Figma/coconut/coconutplantation.png"
-                  alt="project"
-                  style={{ width: "100%", height: "220px" }}
-                />
-              </div>
-              <div
-                className="project-type-container"
-                style={{ marginTop: "70px" }}
-              >
-                <Grid
-                  className="project-description-container"
-                  container
-                  spacing={2}
-                >
-                  <Grid item xs={8}>
-                    <Box className="project-type">
-                      <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{
-                          fontSize: "1.25rem",
-                          fontWeight: "bold",
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          paddingLeft: "5px",
-                          color: "black",
-                          backgroundColor: "#f1f8ff",
-                        }}
-                      >
-                        UI/UX
-                      </Typography>
-                      <span
-                        className="project-description"
-                        style={{
-                          marginTop: "10px",
-                          marginBottom: "10px",
-                          color: "black",
-                          paddingLeft: "5px",
-                        }}
-                      >
-                        User Interface Designs
-                      </span>
-                    </Box>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={4}
-                    sx={{
-                      backgroundColor: "#f1f8ff",
-                      alignContent: "center",
-                      paddingLeft: "7px",
-                    }}
-                  >
-                    <Box className="arrow-right" style={{ paddingLeft: "7px" }}>
-                      <Button
-                        className="project-button"
-                        variant="contained"
-                        onClick={() => handleProjectClick("ui")}
-                        sx={{
-                          backgroundColor: "1976d2",
-                          border: "1px solid #1976d2",
-                          "&:hover": {
-                            borderColor: "#1976d2",
-                            backgroundColor: "#040c16",
-                            color: "#ffffff",
-                          },
-                        }}
-                      >
-                        <KeyboardArrowRightIcon
-                          sx={{
-                            color: "black",
-                            "&:hover": {
-                              color: "white",
-                            },
-                          }}
-                        />
-                      </Button>
-                    </Box>
-                  </Grid>
-                </Grid>
-              </div>
-            </div>
-            {selectedCategory && (
-              <ProjectDialog
-                open={dialogOpen}
-                onClose={() => setDialogOpen(false)}
-                projects={projectsData[selectedCategory]}
-                initialProject={projectsData[selectedCategory][0]}
-                sx={{ backgroundColor: "#f1f8ff" }}
-              />
-            )}
-          </div>
+                </div>
+              </Box>
+            ))}
+          </Box>
+          {selectedCategory && (
+            <ProjectDialog
+              open={dialogOpen}
+              onClose={() => setDialogOpen(false)}
+              projects={projectsData[selectedCategory]}
+              initialProject={projectsData[selectedCategory][0]}
+              isMobile={isMobile}
+            />
+          )}
         </CardContent>
       </Card>
     </div>
@@ -612,3 +413,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
