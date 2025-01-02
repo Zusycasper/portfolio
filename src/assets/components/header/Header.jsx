@@ -1,16 +1,25 @@
-import React from "react";
-import { Card, CardContent } from "@mui/material";
-import "./Header.css";
+  import React, { useState } from "react";
+  import { Card, CardContent, IconButton } from "@mui/material";
+  import MenuIcon from '@mui/icons-material/Menu';
+  import CloseIcon from '@mui/icons-material/Close';
+  import "./Header.css";
 
-function Header() {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  return (
-    <>
+  function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+
+    return (
       <header className="header">
         <Card className="header-card">
           <CardContent className="header-card-content">
@@ -19,41 +28,28 @@ function Header() {
                 <img src="/logoblue.png" alt="Logo" />
               </a>
             </div>
-            <nav className="nav-container">
-              <ul className="flex justify-center space-x-6">
+            <IconButton className="menu-toggle" onClick={toggleMenu} color="inherit">
+              {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            </IconButton>
+            <nav className={`nav-container ${isMenuOpen ? 'open' : ''}`}>
+              <ul>
                 <li>
-                  <a
-                    href="#home"
-                    className="text-gray-800 hover:text-green-600"
-                    onClick={() => scrollToSection('home')}
-                  >
+                  <a href="#home" onClick={() => scrollToSection('home')}>
                     Home
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#about"
-                    className="text-gray-800 hover:text-green-600"
-                    onClick={() => scrollToSection('about')}
-                  >
+                  <a href="#about" onClick={() => scrollToSection('about')}>
                     About Me
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#projects"
-                    className="text-gray-800 hover:text-green-600"
-                    onClick={() => scrollToSection('projects')}
-                  >
+                  <a href="#projects" onClick={() => scrollToSection('projects')}>
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
-                    className="text-gray-800 hover:text-green-600"
-                    onClick={() => scrollToSection('contact')}
-                  >
+                  <a href="#contact" onClick={() => scrollToSection('contact')}>
                     Contact
                   </a>
                 </li>
@@ -62,8 +58,8 @@ function Header() {
           </CardContent>
         </Card>
       </header>
-    </>
-  );
-}
+    );
+  }
 
-export default Header;
+  export default Header;
+

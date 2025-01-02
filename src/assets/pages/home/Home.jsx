@@ -1,5 +1,5 @@
-import { Box, CardContent, Grid, Paper, Typography, Card } from "@mui/material";
 import React from "react";
+import { Box, CardContent, Grid, Paper, Typography, Card } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import "./Home.css";
 import TypingEffect from "../../components/typingEffect/TypingEffect";
@@ -18,11 +18,16 @@ function Home() {
       <Card className="home-card-container">
         <CardContent
           className="card-content-home"
-          sx={{ padding: "200px 0 0 100px" }}
+          sx={{ 
+            padding: { 
+              xs: "100px 20px 50px", 
+              md: "200px 0 0 100px" 
+            } 
+          }}
         >
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
-              <Grid className="website-owner-details" item xs={8}>
+              <Grid className="website-owner-details" item xs={12} md={8}>
                 <span className="website-owner-name-title" style={{ color: "white" }}>
                   Sureshi Siriwardena [ZusyCasper]
                 </span>
@@ -42,11 +47,11 @@ function Home() {
                   </span>
                   <br />
                   <p className="description-about-admin">
-                  Skilled in creating responsive, user-friendly web applications with technologies like React.js and Tailwind CSS. I focus on clean code, intuitive interfaces, and delivering high-quality solutions while staying updated with the latest tools and trends.
+                    Skilled in creating responsive, user-friendly web applications with technologies like React.js and Tailwind CSS. I focus on clean code, intuitive interfaces, and delivering high-quality solutions while staying updated with the latest tools and trends.
                   </p>
                 </Typography>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4} className="image-container">
                 <div className="hs-banner">
                   <img
                     className="admin-image"
@@ -68,7 +73,7 @@ function Home() {
               height: "100px",
               bgcolor: "#040c16",
               "&:hover": {
-                bgcolor:"#040c16",
+                bgcolor: "#040c16",
               },
             }}
           />
@@ -79,3 +84,4 @@ function Home() {
 }
 
 export default Home;
+

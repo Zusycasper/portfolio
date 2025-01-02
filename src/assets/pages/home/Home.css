@@ -1,7 +1,6 @@
-.website-owner-name-title{
+.website-owner-name-title {
     background: #4d9feb72;
     color: #fff;
-    /* color: var(--px-white); */
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
@@ -9,13 +8,11 @@
     line-height: 20px;
     padding: 5px 12px;
     text-transform: uppercase;
-}
-
-.website-owner-details{
-    background: #0788ff33;
-    background: rgba(var(--px-theme-rgb), .2);
+  }
+  
+  .website-owner-details {
+    /* background: rgba(7, 136, 255, 0.2); */
     color: #fff;
-    /* color: var(--px-white); */
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
@@ -23,57 +20,73 @@
     line-height: 20px;
     padding: 5px 12px;
     text-transform: uppercase;
-    text-align-last: start;
-}
-
-/* div{
     text-align: left;
-    text-align-last: start;
-    background-color: #0a0a0a;
-    color: white;
-} */
-
-.home-container, .hs-banner, .seperator, .seperator-line    {
+  }
+  
+  .home-container,
+  .hs-banner,
+  .seperator,
+  .seperator-line {
     text-align: left;
-    text-align-last: start;
-    /* background-color: #0a0a0a; */
     color: white;
-}
-
-.description-about-admin{
+  }
+  
+  .description-about-admin {
     text-align: left;
-    text-align-last: start;
-    /* background-color: #0a0a0a; */
     color: white;
-    padding-right: 250px;
-    font-size: 20px;
     font-size: 1rem;
     font-weight: 400;
-    /* line-height: 1.6; */
     letter-spacing: 1px;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: lowercase;
-}
-
-.admin-image{
-    /* background-color: #0a0a0a; */
-    color: white;
-    width: 30%;
-    height: 61%;
-    position: absolute;
-    top: 170px;
-    left: 900px;
-}
-
-.gif{
-    width: 20%;
-    height: 20%;
-    position: absolute;
-    top: 800px;
-    left: 500px;
-}
-
-.home-container, .home-card-container, .card-content-home{
+  }
+  
+  .admin-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .home-container,
+  .home-card-container,
+  .card-content-home {
     background: linear-gradient(180deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
-}
-
+  }
+  
+  @media (max-width: 768px) {
+    .website-owner-name-title {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+  
+    .website-owner-details {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+  
+    .description-about-admin {
+      padding-right: 0;
+      font-size: 0.9rem;
+    }
+  
+    .image-container {
+      display: none;
+    }
+  
+    .card-content-home {
+      padding: 50px 20px !important;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .admin-image {
+      width: 80%;
+      max-width: 250px;
+    }
+  
+    .description-about-admin {
+      padding-right: 50px;
+    }
+  }
+  
+  
