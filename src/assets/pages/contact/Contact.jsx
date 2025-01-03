@@ -59,8 +59,8 @@ function Contact() {
                     src="/profile-pic (4).png"
                     alt="admin-pic"
                     style={{
-                      width: "300px",
-                      height: "300px",
+                      width: "80%",
+                      height: "auto",
                       marginBottom: "50px",
                       zIndex: "1",
                     }}
@@ -73,8 +73,8 @@ function Contact() {
                       </a>
                     </Grid>
                     <Divider />
-                    <Grid item>
-                      <label style={{ fontWeight: "bold", color:"white", paddingRight: "10px" }}>Phone Number: </label>
+                    <Grid item style={{ textAlign:"initial" }}>
+                      <label style={{ fontWeight: "bold", color:"white", paddingRight: "10px", textAlign:"initial" }}>Phone Number: </label>
                       <a href="tel:+94713333059">+94713333059</a>
                     </Grid>
                     <Divider />

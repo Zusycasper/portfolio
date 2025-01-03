@@ -18,17 +18,20 @@ function Home() {
       <Card className="home-card-container">
         <CardContent
           className="card-content-home"
-          sx={{ 
-            padding: { 
-              xs: "100px 20px 50px", 
-              md: "200px 0 0 100px" 
-            } 
+          sx={{
+            padding: {
+              xs: "100px 20px 50px",
+              md: "200px 0 0 100px",
+            },
           }}
         >
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
               <Grid className="website-owner-details" item xs={12} md={8}>
-                <span className="website-owner-name-title" style={{ color: "white" }}>
+                <span
+                  className="website-owner-name-title"
+                  style={{ color: "white" }}
+                >
                   Sureshi Siriwardena [ZusyCasper]
                 </span>
                 <Typography
@@ -47,7 +50,13 @@ function Home() {
                   </span>
                   <br />
                   <p className="description-about-admin">
-                    Skilled in creating responsive, user-friendly web applications with technologies like React.js and Tailwind CSS. I focus on clean code, intuitive interfaces, and delivering high-quality solutions while staying updated with the latest tools and trends.
+                    Experienced Frontend Developer with hands-on expertise in
+                    HTML, CSS, Tailwind CSS, JavaScript, React.js, and styling
+                    frameworks such as Bootstrap and MUI. Proficient in backend
+                    frameworks like PHP Laravel and skilled in tools like Figma
+                    and WordPress. Dedicated to crafting responsive,
+                    user-friendly web applications with clean code and intuitive
+                    interfaces.{" "}
                   </p>
                 </Typography>
               </Grid>
@@ -84,4 +93,3 @@ function Home() {
 }
 
 export default Home;
-

@@ -18,7 +18,7 @@ function About() {
         <CardContent
           className="card-content-about"
           sx={{
-            padding: { md: "50px" },
+            padding: { xs: "100px 20px", md: "200px 0 0 100px" },
           }}
         >
           <Box sx={{ flexGrow: 1 }}>
@@ -42,7 +42,7 @@ function About() {
                   />
                 </div>
               </Grid>
-              <Grid className="website-owner-details" item xs={12}>
+              <Grid className="website-owner-details" item xs={12} md={8}>
                 <span className="website-owner-name" style={{ color: "white" }}>
                   About me
                 </span>
@@ -151,7 +151,7 @@ function About() {
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
                           </p>
-                          <p className="dummy-text" style={{ color: "transparent" }}>
+                          <p className="dummy-text-transparent" style={{ color: "transparent" }}>
                             Figma, Wordpress, Canva, Adobe Photoshop, Adobe
                             Illustrator
                           </p>

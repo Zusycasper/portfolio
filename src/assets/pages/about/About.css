@@ -82,7 +82,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  top: 200px;
+  top: 0;
   left: 0;
 }
 
@@ -95,12 +95,12 @@
 }
 
 .gif-rotate {
-  top: 0px;
-  left: -15%;
+  top: -30%;
+  left: -32%;
 }
 
 .gif-rotate-2 {
-  top: 550px;
+  bottom: -55%;
   right: -15%;
 }
 
@@ -140,8 +140,6 @@
 
   .admin-photo {
     max-width: 300px;
-    top: -60%;
-    left: 0%;
   }
 
   .gif-rotate,
@@ -150,13 +148,13 @@
   }
 
   .gif-rotate {
-    top:60%;
-    left: -40%;
+    top: -30%;
+    left: -20%;
   }
 
   .gif-rotate-2 {
-    top: 150%;
-    right: -10%;
+    bottom: -10%;
+    right: -15%;
   }
 }
 
