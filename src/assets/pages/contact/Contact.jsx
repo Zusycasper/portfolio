@@ -180,6 +180,7 @@ function Contact() {
               width: "100%",
               height: "50px",
               textAlignLast: "center",
+              textAlign: "justify",
               alignContent: "space-evenly",
               bgcolor: "#082742",
               "&:hover": {
