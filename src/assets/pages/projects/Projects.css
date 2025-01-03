@@ -1,3 +1,7 @@
+div#projects.project-container, div.MuiCardContent-root.card-content-projects.css-1qxnp0i {
+    border: 1px solid #000000;
+    border-radius: 0px !important; /* Remove border-radius */
+}
 .website-owner-name {
     background: #4d9feb72;
     color: #000000;
